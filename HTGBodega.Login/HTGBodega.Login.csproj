@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LCategorias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,9 +49,9 @@
       <Project>{877466ac-857f-4211-a65e-3fa516c227a0}</Project>
       <Name>HTGBodega.data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HTGBodega.UI\HTGBodega.UI.csproj">
-      <Project>{0447a743-5144-4d20-b483-06e0162d0d0c}</Project>
-      <Name>HTGBodega.UI</Name>
+    <ProjectReference Include="..\HTGBodega.Entity\HTGBodega.Entity.csproj">
+      <Project>{316aa8f9-dcc8-470f-ba8e-93a6d6cdae43}</Project>
+      <Name>HTGBodega.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

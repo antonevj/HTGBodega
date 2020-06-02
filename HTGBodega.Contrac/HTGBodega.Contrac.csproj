@@ -41,8 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\ICreate.cs" />
+    <Compile Include="Base\ICrud.cs" />
+    <Compile Include="Base\IDelete.cs" />
     <Compile Include="Base\IRead.cs" />
+    <Compile Include="Base\IUpdate.cs" />
+    <Compile Include="ICategorias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HTGBodega.Entity\HTGBodega.Entity.csproj">
+      <Project>{316AA8F9-DCC8-470F-BA8E-93A6D6CDAE43}</Project>
+      <Name>HTGBodega.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

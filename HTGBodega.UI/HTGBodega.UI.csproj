@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriasUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriasUI.Designer.cs">
+      <DependentUpon>CategoriasUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CategoriasUI.resx">
+      <DependentUpon>CategoriasUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +87,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HTGBodega.Entity\HTGBodega.Entity.csproj">
+      <Project>{316AA8F9-DCC8-470F-BA8E-93A6D6CDAE43}</Project>
+      <Name>HTGBodega.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HTGBodega.Login\HTGBodega.Login.csproj">
+      <Project>{8b07bb5b-0afe-4f4b-9132-11ff3dc7f2d2}</Project>
+      <Name>HTGBodega.Login</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
