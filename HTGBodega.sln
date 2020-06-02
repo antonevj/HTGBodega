@@ -3,9 +3,56 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopAplication", "DesktopAplication", "{BD03DF4B-FFF8-41D7-AC07-02370EF7D656}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiAplication", "ApiAplication", "{01DD5031-AD82-4B67-ACD0-1534473A7A69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTGBodega.data", "HTGBodega.data\HTGBodega.data.csproj", "{877466AC-857F-4211-A65E-3FA516C227A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTGBodega.Login", "HTGBodega.Login\HTGBodega.Login.csproj", "{8B07BB5B-0AFE-4F4B-9132-11FF3DC7F2D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTGBodega.Entity", "HTGBodega.Entity\HTGBodega.Entity.csproj", "{316AA8F9-DCC8-470F-BA8E-93A6D6CDAE43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTGBodega.Contrac", "HTGBodega.Contrac\HTGBodega.Contrac.csproj", "{D7F636D7-1038-4729-B2D7-FD0410CC30A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTGBodega.UI", "HTGBodega.UI\HTGBodega.UI.csproj", "{0447A743-5144-4D20-B483-06E0162D0D0C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{877466AC-857F-4211-A65E-3FA516C227A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877466AC-857F-4211-A65E-3FA516C227A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877466AC-857F-4211-A65E-3FA516C227A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877466AC-857F-4211-A65E-3FA516C227A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B07BB5B-0AFE-4F4B-9132-11FF3DC7F2D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B07BB5B-0AFE-4F4B-9132-11FF3DC7F2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B07BB5B-0AFE-4F4B-9132-11FF3DC7F2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B07BB5B-0AFE-4F4B-9132-11FF3DC7F2D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316AA8F9-DCC8-470F-BA8E-93A6D6CDAE43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316AA8F9-DCC8-470F-BA8E-93A6D6CDAE43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316AA8F9-DCC8-470F-BA8E-93A6D6CDAE43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316AA8F9-DCC8-470F-BA8E-93A6D6CDAE43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F636D7-1038-4729-B2D7-FD0410CC30A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F636D7-1038-4729-B2D7-FD0410CC30A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F636D7-1038-4729-B2D7-FD0410CC30A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F636D7-1038-4729-B2D7-FD0410CC30A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0447A743-5144-4D20-B483-06E0162D0D0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0447A743-5144-4D20-B483-06E0162D0D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0447A743-5144-4D20-B483-06E0162D0D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0447A743-5144-4D20-B483-06E0162D0D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{877466AC-857F-4211-A65E-3FA516C227A0} = {BD03DF4B-FFF8-41D7-AC07-02370EF7D656}
+		{8B07BB5B-0AFE-4F4B-9132-11FF3DC7F2D2} = {BD03DF4B-FFF8-41D7-AC07-02370EF7D656}
+		{316AA8F9-DCC8-470F-BA8E-93A6D6CDAE43} = {BD03DF4B-FFF8-41D7-AC07-02370EF7D656}
+		{D7F636D7-1038-4729-B2D7-FD0410CC30A0} = {BD03DF4B-FFF8-41D7-AC07-02370EF7D656}
+		{0447A743-5144-4D20-B483-06E0162D0D0C} = {BD03DF4B-FFF8-41D7-AC07-02370EF7D656}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E31E9727-9BE1-42C1-A58B-241B2A7632B0}
