@@ -27,5 +27,10 @@ namespace HTGBodega.UI
         {
             dataGridView1.DataSource = new LCategorias().GetAll(chkEstado.Checked);
         }
+
+        private void boxCriterio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
