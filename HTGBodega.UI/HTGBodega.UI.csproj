@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaDetalleIU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriaDetalleIU.Designer.cs">
+      <DependentUpon>CategoriaDetalleIU.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoriasUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CategoriaDetalleIU.resx">
+      <DependentUpon>CategoriaDetalleIU.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoriasUI.resx">
       <DependentUpon>CategoriasUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +105,10 @@
     <ProjectReference Include="..\HTGBodega.Login\HTGBodega.Login.csproj">
       <Project>{8b07bb5b-0afe-4f4b-9132-11ff3dc7f2d2}</Project>
       <Name>HTGBodega.Login</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HTGBodega.Util\HTGBodega.Util.csproj">
+      <Project>{A0AF2508-B6DE-47A0-9ACC-4B83345888C7}</Project>
+      <Name>HTGBodega.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

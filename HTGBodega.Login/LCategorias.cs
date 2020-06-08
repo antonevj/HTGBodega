@@ -19,5 +19,30 @@ namespace HTGBodega.Login
 
             return new DCategorias().GetAll(status);
         }
-   }
+
+        //llamar de DCategorias
+        public int Create(ECategorias t)
+        {
+            return new DCategorias().Create(t);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+   
+   
 }

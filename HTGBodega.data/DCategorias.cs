@@ -10,8 +10,10 @@ using System.Data.SqlClient;
 
 namespace HTGBodega.data
 {
+
     public class DCategorias : ICategorias
     {
+
         public ECategorias Get(int id)
         {
             throw new NotImplementedException();
@@ -53,7 +55,41 @@ namespace HTGBodega.data
                 return lista;
             }
         }
+        public int Create(ECategorias t)
+        {
 
 
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "usp_Categoria_ICreate";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Nombre", t.Nombre);
+                cmd.Parameters.AddWithValue("@Descripcion", t.Descripcion);
+                cmd.Parameters.AddWithValue("@Estado",t.Estado);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
+
+        }
+
+        public int Update(ECategorias t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Delete(ECategorias id)
+        {
+            throw new NotImplementedException();
+        }
+
+
+       
     }
 }

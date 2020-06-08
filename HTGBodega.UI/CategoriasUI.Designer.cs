@@ -37,12 +37,12 @@
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnReporte = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.boxCriterio = new System.Windows.Forms.ComboBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnReporte = new System.Windows.Forms.ToolStripSplitButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,8 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 48);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(796, 313);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(805, 367);
             this.dataGridView1.TabIndex = 0;
             // 
             // chkEstado
@@ -80,7 +81,7 @@
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(796, 48);
+            this.toolStrip1.Size = new System.Drawing.Size(805, 48);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -106,6 +107,7 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(45, 45);
             this.btnAgregar.Text = "Nuevo";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -128,6 +130,17 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(45, 45);
             this.btnEliminar.Text = "Eliminar";
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.AutoSize = false;
+            this.btnReporte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
+            this.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReporte.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(55, 45);
+            this.btnReporte.Text = "Reportes";
             // 
             // toolStripSeparator2
             // 
@@ -170,22 +183,11 @@
             this.btnBorrar.Text = "+";
             this.btnBorrar.UseVisualStyleBackColor = true;
             // 
-            // btnReporte
-            // 
-            this.btnReporte.AutoSize = false;
-            this.btnReporte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
-            this.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnReporte.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(55, 45);
-            this.btnReporte.Text = "Reportes";
-            // 
             // CategoriasUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 361);
+            this.ClientSize = new System.Drawing.Size(805, 415);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.chkEstado);
             this.Controls.Add(this.txtValor);
@@ -193,6 +195,7 @@
             this.Controls.Add(this.boxCriterio);
             this.Controls.Add(this.toolStrip1);
             this.Name = "CategoriasUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoriasUI";
             this.Load += new System.EventHandler(this.CategoriasUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

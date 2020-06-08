@@ -8,8 +8,9 @@ using HTGBodega.Contrac.Base;
 
 namespace HTGBodega.Contrac
 {
- public   interface ICategorias:IRead<ECategorias>
+ public   interface ICategorias:IRead<ECategorias>,ICreate<ECategorias>,IUpdate<ECategorias>,IDelete<ECategorias>
     { 
+
 
     }
 }
