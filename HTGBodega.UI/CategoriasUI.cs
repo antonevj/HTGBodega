@@ -68,9 +68,26 @@ namespace HTGBodega.UI
 
 
             CategoriaDetalleIU detalle = new CategoriaDetalleIU();
-            detalle.StartPosition = FormStartPosition.CenterScreen;
-            detalle.ShowDialog();
-            chkEstado.Checked = true;
+            detalle.StartPosition = FormStartPosition.CenterScreen;          
+            detalle.chkEstado.Checked = true;
+            detalle.operacion = (byte) MisConstantes.OPERACION.Insercion;
+
+          DialogResult rpta = detalle.ShowDialog();
+           
+            if (rpta==DialogResult.OK)
+            {
+                mostrarDatos();
+            }
+
+            
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+
+
+
         }
     }
 }
