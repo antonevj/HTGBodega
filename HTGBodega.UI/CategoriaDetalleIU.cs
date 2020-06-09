@@ -47,7 +47,7 @@ namespace HTGBodega.UI
 
                ID = lblID.Text.Length == 0 ? 0 : int.Parse(lblID.Text),
                 Nombre = txtNombre.Text.Trim().ToUpper(),
-                Descripcion = txtNombre.Text.Trim().ToUpper(),
+                Descripcion = txtDescripcion.Text.Trim().ToUpper(),
                 Estado =chkEstado.Checked
 
 
@@ -59,6 +59,10 @@ namespace HTGBodega.UI
             {
                 rpta = new LCategorias().Create(obj);
 
+            }
+            else
+            {
+                rpta = new LCategorias().Update(obj);
             }
 
             if (rpta>0)

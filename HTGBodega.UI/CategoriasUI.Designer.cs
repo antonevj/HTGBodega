@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriasUI));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chkEstado = new System.Windows.Forms.CheckBox();
+            this.chkEstado1 = new System.Windows.Forms.CheckBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,21 +54,21 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(805, 367);
+            this.dataGridView1.Size = new System.Drawing.Size(859, 367);
             this.dataGridView1.TabIndex = 0;
             // 
-            // chkEstado
+            // chkEstado1
             // 
-            this.chkEstado.AutoSize = true;
-            this.chkEstado.Checked = true;
-            this.chkEstado.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkEstado.Location = new System.Drawing.Point(737, 14);
-            this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(59, 17);
-            this.chkEstado.TabIndex = 1;
-            this.chkEstado.Text = "Estado";
-            this.chkEstado.UseVisualStyleBackColor = true;
-            this.chkEstado.CheckedChanged += new System.EventHandler(this.chkEstado_CheckedChanged);
+            this.chkEstado1.AutoSize = true;
+            this.chkEstado1.Checked = true;
+            this.chkEstado1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkEstado1.Location = new System.Drawing.Point(788, 14);
+            this.chkEstado1.Name = "chkEstado1";
+            this.chkEstado1.Size = new System.Drawing.Size(59, 17);
+            this.chkEstado1.TabIndex = 1;
+            this.chkEstado1.Text = "Estado";
+            this.chkEstado1.UseVisualStyleBackColor = true;
+            this.chkEstado1.CheckedChanged += new System.EventHandler(this.chkEstado_CheckedChanged);
             // 
             // toolStrip1
             // 
@@ -83,7 +83,7 @@
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(805, 48);
+            this.toolStrip1.Size = new System.Drawing.Size(859, 48);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -133,16 +133,16 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(45, 45);
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnReporte
             // 
             this.btnReporte.AutoSize = false;
-            this.btnReporte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReporte.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(55, 45);
+            this.btnReporte.Size = new System.Drawing.Size(105, 45);
             this.btnReporte.Text = "Reportes";
             // 
             // toolStripSeparator2
@@ -162,7 +162,7 @@
             this.boxCriterio.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.boxCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCriterio.FormattingEnabled = true;
-            this.boxCriterio.Location = new System.Drawing.Point(414, 7);
+            this.boxCriterio.Location = new System.Drawing.Point(464, 7);
             this.boxCriterio.Name = "boxCriterio";
             this.boxCriterio.Size = new System.Drawing.Size(109, 28);
             this.boxCriterio.TabIndex = 3;
@@ -170,7 +170,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(529, 11);
+            this.txtValor.Location = new System.Drawing.Point(579, 11);
             this.txtValor.Multiline = true;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(157, 22);
@@ -179,7 +179,7 @@
             // btnBorrar
             // 
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Location = new System.Drawing.Point(696, 10);
+            this.btnBorrar.Location = new System.Drawing.Point(746, 10);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(32, 23);
             this.btnBorrar.TabIndex = 6;
@@ -190,9 +190,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 415);
+            this.ClientSize = new System.Drawing.Size(859, 415);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.chkEstado);
+            this.Controls.Add(this.chkEstado1);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.boxCriterio);
@@ -212,7 +212,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox chkEstado;
+        private System.Windows.Forms.CheckBox chkEstado1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

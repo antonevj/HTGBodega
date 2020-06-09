@@ -81,12 +81,59 @@ namespace HTGBodega.data
 
         public int Update(ECategorias t)
         {
-            throw new NotImplementedException();
+
+
+
+
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "usp_Categoria_IUpdate";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ID", t.ID);
+                cmd.Parameters.AddWithValue("@Nombre", t.Nombre);
+                cmd.Parameters.AddWithValue("@Descripcion", t.Descripcion);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
+
+
+
+
         }
 
-        public int Delete(ECategorias id)
+        public int Delete(int id)
         {
-            throw new NotImplementedException();
+
+
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "usp_Categoria_IDelete";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ID", id);
+              
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
+
+
+
         }
 
 

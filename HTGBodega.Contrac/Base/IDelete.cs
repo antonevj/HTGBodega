@@ -8,7 +8,7 @@ namespace HTGBodega.Contrac.Base
 {
    public interface IDelete<T> where T:class
     {
-        int Delete(T id);
+        int Delete(int id);
 
     }
 }

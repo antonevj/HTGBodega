@@ -26,7 +26,15 @@ namespace HTGBodega.Login
             return new DCategorias().Create(t);
         }
 
+        public int Update(ECategorias t)
+        {
+            return new DCategorias().Update(t);
+        }
 
+        public int Delete( int id   )
+        {
+            return new DCategorias().Delete(id);
+        }
 
 
 

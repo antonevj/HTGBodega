@@ -36,7 +36,7 @@ namespace HTGBodega.UI
 
         public void mostrarDatos()
         {
-            dataGridView1.DataSource = new LCategorias().GetAll(chkEstado.Checked);
+            dataGridView1.DataSource = new LCategorias().GetAll(chkEstado1.Checked);
 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
@@ -84,10 +84,60 @@ namespace HTGBodega.UI
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count>0)
+            {
+
+                CategoriaDetalleIU detalle = new CategoriaDetalleIU();
+
+                detalle.StartPosition = FormStartPosition.CenterParent;
+                detalle.operacion = (byte)MisConstantes.OPERACION.Modificacion;
+
+                detalle.lblID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+                detalle.txtNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                detalle.txtDescripcion.Text = dataGridView1.CurrentRow.Cells["Descripcion"].Value.ToString();
+                detalle.chkEstado.Checked = chkEstado1.Checked;
+
+                DialogResult rpta = detalle.ShowDialog();
+
+                if (rpta == DialogResult.OK)
+                {
+                    mostrarDatos();
+                }
+
+            }
 
 
 
+        }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+               
+                DialogResult k = MessageBox.Show("Estas seguro  de eliminar este registro?","aviso",MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+
+                int rpta = 0;
+
+                if (k==DialogResult.Yes)
+                {
+                    //capturar la fila del id para poder eliminar
+                    int id = (int)dataGridView1.CurrentRow.Cells["ID"].Value;
+
+                     rpta= new LCategorias().Delete(id);
+
+                    if (rpta>0)
+                    {
+                        MessageBox.Show("datos eliminados correctamente","aviso",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        mostrarDatos();
+                    }
+
+                }
+            }else
+
+                MessageBox.Show("debe seleccionar un elemento");
         }
     }
 }
