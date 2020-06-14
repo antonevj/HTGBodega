@@ -89,7 +89,7 @@ namespace HTGBodega.data
             {
                 cnx.ConnectionString = MiCadena.CadenaCnx();
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "usp_Categoria_IUpdate";
+                cmd.CommandText = "sp_modificar_clientes";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@ID", t.ID);
