@@ -47,6 +47,7 @@
     <Compile Include="Base\IRead.cs" />
     <Compile Include="Base\IUpdate.cs" />
     <Compile Include="ICategorias.cs" />
+    <Compile Include="IProveedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

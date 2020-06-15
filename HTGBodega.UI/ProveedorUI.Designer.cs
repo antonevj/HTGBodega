@@ -1,6 +1,6 @@
 ﻿namespace HTGBodega.UI
 {
-    partial class CategoriasUI
+    partial class ProveedorUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriasUI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProveedorUI));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chkEstado1 = new System.Windows.Forms.CheckBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -40,9 +39,10 @@
             this.btnReporte = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.boxCriterio = new System.Windows.Forms.ComboBox();
-            this.txtValor = new System.Windows.Forms.TextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.chkEstado1 = new System.Windows.Forms.CheckBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.boxCriterio = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,22 +54,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(859, 367);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(857, 427);
+            this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // chkEstado1
-            // 
-            this.chkEstado1.AutoSize = true;
-            this.chkEstado1.Checked = true;
-            this.chkEstado1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkEstado1.Location = new System.Drawing.Point(788, 14);
-            this.chkEstado1.Name = "chkEstado1";
-            this.chkEstado1.Size = new System.Drawing.Size(59, 17);
-            this.chkEstado1.TabIndex = 1;
-            this.chkEstado1.Text = "Estado";
-            this.chkEstado1.UseVisualStyleBackColor = true;
-            this.chkEstado1.CheckedChanged += new System.EventHandler(this.chkEstado_CheckedChanged);
             // 
             // toolStrip1
             // 
@@ -84,16 +71,16 @@
             this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(859, 48);
-            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Size = new System.Drawing.Size(857, 48);
+            this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(142, 45);
-            this.toolStripLabel1.Text = "CATEGORÌAS";
+            this.toolStripLabel1.Size = new System.Drawing.Size(137, 45);
+            this.toolStripLabel1.Text = "PROVEEDOR";
             // 
             // toolStripSeparator1
             // 
@@ -157,51 +144,62 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(62, 45);
             this.toolStripLabel2.Text = "Bùsqueda:";
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Location = new System.Drawing.Point(746, 11);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(32, 23);
+            this.btnBorrar.TabIndex = 10;
+            this.btnBorrar.Text = "+";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            // 
+            // chkEstado1
+            // 
+            this.chkEstado1.AutoSize = true;
+            this.chkEstado1.Checked = true;
+            this.chkEstado1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkEstado1.Location = new System.Drawing.Point(788, 15);
+            this.chkEstado1.Name = "chkEstado1";
+            this.chkEstado1.Size = new System.Drawing.Size(59, 17);
+            this.chkEstado1.TabIndex = 7;
+            this.chkEstado1.Text = "Estado";
+            this.chkEstado1.UseVisualStyleBackColor = true;
+            this.chkEstado1.CheckedChanged += new System.EventHandler(this.chkEstado1_CheckedChanged);
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(579, 12);
+            this.txtValor.Multiline = true;
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(157, 22);
+            this.txtValor.TabIndex = 9;
+            // 
             // boxCriterio
             // 
             this.boxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxCriterio.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.boxCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCriterio.FormattingEnabled = true;
-            this.boxCriterio.Location = new System.Drawing.Point(464, 7);
+            this.boxCriterio.Location = new System.Drawing.Point(464, 8);
             this.boxCriterio.Name = "boxCriterio";
             this.boxCriterio.Size = new System.Drawing.Size(109, 28);
-            this.boxCriterio.TabIndex = 3;
-            this.boxCriterio.SelectedIndexChanged += new System.EventHandler(this.boxCriterio_SelectedIndexChanged);
+            this.boxCriterio.TabIndex = 8;
             // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(579, 11);
-            this.txtValor.Multiline = true;
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(157, 22);
-            this.txtValor.TabIndex = 5;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.Location = new System.Drawing.Point(746, 10);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(32, 23);
-            this.btnBorrar.TabIndex = 6;
-            this.btnBorrar.Text = "+";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
-            // CategoriasUI
+            // ProveedorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 415);
+            this.ClientSize = new System.Drawing.Size(857, 475);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.chkEstado1);
             this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.boxCriterio);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "CategoriasUI";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CategoriasUI";
-            this.Load += new System.EventHandler(this.CategoriasUI_Load);
+            this.Name = "ProveedorUI";
+            this.Text = "ProveedorUI";
+            this.Load += new System.EventHandler(this.ProveedorUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -213,18 +211,18 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox chkEstado1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnAgregar;
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
+        private System.Windows.Forms.ToolStripSplitButton btnReporte;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ComboBox boxCriterio;
-        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.ToolStripSplitButton btnReporte;
+        private System.Windows.Forms.CheckBox chkEstado1;
+        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.ComboBox boxCriterio;
     }
 }

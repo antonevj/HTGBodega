@@ -16,7 +16,7 @@ namespace HTGBodega.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CategoriasUI());
+            Application.Run(new ProveedorUI());
         }
     }
 }

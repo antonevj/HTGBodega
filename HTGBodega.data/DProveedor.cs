@@ -1,32 +1,33 @@
-﻿using System;
+﻿using HTGBodega.Contrac;
+using HTGBodega.Entity;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HTGBodega.Contrac;
-using HTGBodega.Entity;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace HTGBodega.data
 {
+    public class DProveedor : IProveedor
 
-    public class DCategorias : ICategorias
+
     {
 
-        public ECategorias Get(int id)
+
+        public EProveedor Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ECategorias> GetAll(bool status)
+        public IEnumerable<EProveedor> GetAll(bool status)
         {
-
-            using (SqlConnection cnx=new SqlConnection())
+            using (SqlConnection cnx = new SqlConnection())
             {
                 cnx.ConnectionString = MiCadena.CadenaCnx();
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "usp_Categorias_getAll";
+                cmd.CommandText = "usp_Proveedor_getAll";
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Estado", status);
                 cmd.Connection = cnx;
@@ -34,67 +35,46 @@ namespace HTGBodega.data
 
                 var reader = cmd.ExecuteReader();
 
-                var lista = new List<ECategorias>();
+                var lista = new List<EProveedor>();
                 while (reader.Read())
                 {
 
-                    lista.Add(new ECategorias
+                    lista.Add(new EProveedor
                     {
 
                         ID = Convert.ToInt32(reader["ID"]),
-                        Nombre = (reader["Nombre"].ToString()),
-                        Descripcion = (reader["Descripcion"].ToString()),
-                      //  Estado = Convert.ToBoolean(reader["Estado"]),
+                        Razon_social = (reader["RazonSocial"].ToString()),
+                        RUC = (reader["Ruc"].ToString()),
+                        Direccion = (reader["Direccion"].ToString()),
+                        Telefono = (reader["Telefono"].ToString()),
+                        Mail = (reader["Mail"].ToString()),
+                        //  Estado = Convert.ToBoolean(reader["Estado"]),
 
 
-                    }) ;
-             
+                    });
+
                 }
 
 
                 return lista;
             }
         }
-        public int Create(ECategorias t)
-        {
 
+
+        public int Create(EProveedor t)
+        {
 
             using (SqlConnection cnx = new SqlConnection())
             {
                 cnx.ConnectionString = MiCadena.CadenaCnx();
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "usp_Categoria_ICreate";
+                cmd.CommandText = "usp_Proveedor_ICreate";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", t.Nombre);
-                cmd.Parameters.AddWithValue("@Descripcion", t.Descripcion);
-                cmd.Parameters.AddWithValue("@Estado",t.Estado);
-                cmd.Connection = cnx;
-                cnx.Open();
-
-
-                int filasafectadas = cmd.ExecuteNonQuery();
-
-                return filasafectadas;
-            }
-
-        }
-
-        public int Update(ECategorias t)
-        {
-
-
-
-
-            using (SqlConnection cnx = new SqlConnection())
-            {
-                cnx.ConnectionString = MiCadena.CadenaCnx();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "usp_Categoria_IUpdate";
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@ID", t.ID);
-                cmd.Parameters.AddWithValue("@Nombre", t.Nombre);
-                cmd.Parameters.AddWithValue("@Descripcion", t.Descripcion);
+                cmd.Parameters.AddWithValue("@RazonSocial", t.Razon_social);
+                cmd.Parameters.AddWithValue("@RUC", t.RUC);
+                cmd.Parameters.AddWithValue("@Direccion", t.Direccion);
+                cmd.Parameters.AddWithValue("@Telefono", t.Telefono);
+                cmd.Parameters.AddWithValue("@Mail", t.Mail);
                 cmd.Parameters.AddWithValue("@Estado", t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
@@ -105,24 +85,27 @@ namespace HTGBodega.data
                 return filasafectadas;
             }
 
-
-
-
         }
 
-        public int Delete(int id)
-        {
+     
+       
 
+        public int Update(EProveedor t)
+        {
 
             using (SqlConnection cnx = new SqlConnection())
             {
                 cnx.ConnectionString = MiCadena.CadenaCnx();
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "usp_Categoria_IDelete";
+                cmd.CommandText = "usp_Proveedor_IUpdate";
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@ID", id);
-              
+                cmd.Parameters.AddWithValue("@ID", t.ID);
+                cmd.Parameters.AddWithValue("@RazonSocial", t.Razon_social);
+                cmd.Parameters.AddWithValue("@RUC", t.RUC);
+                cmd.Parameters.AddWithValue("@Direccion", t.Direccion);
+                cmd.Parameters.AddWithValue("@Telefono", t.Telefono);
+                cmd.Parameters.AddWithValue("@Mail", t.Mail);
+                cmd.Parameters.AddWithValue("@Estado", t.Estado);
                 cmd.Connection = cnx;
                 cnx.Open();
 
@@ -132,11 +115,29 @@ namespace HTGBodega.data
                 return filasafectadas;
             }
 
+        }
+        public int Delete(int id)
+        {
 
+            using (SqlConnection cnx = new SqlConnection())
+            {
+                cnx.ConnectionString = MiCadena.CadenaCnx();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "usp_Proveedor_IDelete";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ID", id);
+
+                cmd.Connection = cnx;
+                cnx.Open();
+
+
+                int filasafectadas = cmd.ExecuteNonQuery();
+
+                return filasafectadas;
+            }
 
         }
 
-
-       
     }
 }

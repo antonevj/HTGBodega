@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DCategorias.cs" />
+    <Compile Include="DProveedor.cs" />
     <Compile Include="MiCadena.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
